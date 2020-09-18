@@ -1,3 +1,10 @@
+# make a move
+# print directions for each move
+# check if valid input
+# loop while position x,y is not 3,1
+# if x,y is  3,1 print victory and break
+# else continue looping
+
 def move(px,py, dir):
     if "N" in dir:
         py += 1 
