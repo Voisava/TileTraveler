@@ -41,6 +41,7 @@ def valid_input(moves, user_input):
 position_x = 1
 position_y = 1
 coins = 0
+moves = 0
 print("You can travel:", print_dir(position_x, position_y))
 while True:
     # if position (3,1) victory
@@ -49,10 +50,11 @@ while True:
         break
     user_input = input("Direction: ")
     inp = user_input.upper()
+    moves +=1
     if valid_input(print_dir(position_x, position_y), inp):
         position_x, position_y = move(position_x, position_y, inp)
         if position_x == 3 and position_y == 1:
-            print("Victory! Total coins {}.".format(coins))
+            print("Victory! Total coins {}. Moves {}".format(coins, moves))
             break
 
         elif position_y == 2 or (position_x == 2 and position_y == 3):
