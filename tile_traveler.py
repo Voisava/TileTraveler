@@ -1,3 +1,10 @@
+# make a move
+# print directions for each move
+# check if valid input
+# loop while position x,y is not 3,1
+# if x,y is  3,1 print victory and break
+# else continue looping
+
 def move(px,py, dir):
     if "N" in dir:
         py += 1
@@ -49,10 +56,6 @@ while True:
         if position_x == 3 and position_y == 1:
             print("Victory! Total coins {}. Moves {}.".format(coins, moves))
             break
-        # elif position_y == 2 or (position_x == 2 and position_y == 3):
-        #     pull_lever = input("Pull a lever (y/n): ")
-        #     coins += 1
-        #     print("You received 1 coin, your total is now {}.".format(coins))
 
         elif position_y == 2 or (position_x == 2 and position_y == 3):
             pull_lever = input("Pull a lever (y/n): ")
